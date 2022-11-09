@@ -1,0 +1,42 @@
+server:
+  port: 1010
+spring:
+  application:
+    name: mall-auth
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 120.79.48.77:8848
+        username: nacos
+        password: nacos
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://120.79.48.77:3306/wuaiyy_mall?useSSL=false&serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8
+      username: root
+      password: wuaiyy
+      max-active: 30
+      min-idle: 3
+      initial-size: 3
+      validation-query: select 1
+      max-wait: 5000
+      stat-view-servlet:
+        enabled: true
+        login-username: admin
+        login-password: admin
+        allow:
+        deny:
+        url-pattern:
+          - /druid/*
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto

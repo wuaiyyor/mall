@@ -1,0 +1,26 @@
+server:
+  port: 80
+spring:
+  application:
+    name: mall-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 120.79.48.77:8848
+        username: nacos
+        password: nacos
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+  redis:
+    host: 120.79.48.77
+    port: 6379
+    database: 0
+    password: wuaiyy
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

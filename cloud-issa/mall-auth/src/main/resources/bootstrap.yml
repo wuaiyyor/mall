@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: mall-auth
+  cloud:
+    nacos:
+      config:
+        server-addr: 120.79.48.77:8848
+        username: nacos
+        password: nacos
+        namespace: 110db34c-02b7-4505-94d1-107317b49ec2
+        prefix: auth-dev
+        file-extension: yml
+        group: dev

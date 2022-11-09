@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: mall-gateway
+  cloud:
+    nacos:
+      config:
+        server-addr: 120.79.48.77:8848
+        username: nacos
+        password: nacos
+        namespace: 1dab2752-e6fd-462b-9b6d-607b561f5d4d
+        prefix: gateway-dev
+        file-extension: yml
+        group: dev
